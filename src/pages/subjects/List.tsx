@@ -21,9 +21,9 @@ import { ShowButton } from '@/components/refine-ui/buttons/show'
 import { Subject } from '@/types'
 import { DEPARTMENT_OPTIONS } from '@/constants'
 
-const SubjectsList = () => {
+const SubjectListPage = () => {
 	const [searchQuery, setSearchQuery] = useState('')
-	const [selectedDepartment, setSelectedDepartment] = useState('all')
+	const [selectedDepartment, setSelectedDepartment] = useState<string>('all')
 
 	const subjectColumns = useMemo<ColumnDef<Subject>[]>(
 		() => [
@@ -128,7 +128,6 @@ const SubjectsList = () => {
 	return (
 		<ListView>
 			<Breadcrumb />
-
 			<h1 className='page-title'>Subjects</h1>
 
 			<div className='intro-row'>
@@ -137,36 +136,35 @@ const SubjectsList = () => {
 				<div className='actions-row'>
 					<div className='search-field'>
 						<Search className='search-icon' />
-
 						<Input
 							type='text'
-							placeholder='Search by subject name'
+							placeholder='Search by name...'
 							className='pl-10 w-full'
 							value={searchQuery}
-							onChange={(e) => setSearchQuery(e.target.value)}
+							onChange={(event) => setSearchQuery(event.target.value)}
 						/>
 					</div>
 
 					<div className='flex gap-2 w-full sm:w-auto'>
 						<Select
 							value={selectedDepartment}
-							onValueChange={() => setSelectedDepartment}
+							onValueChange={setSelectedDepartment}
 						>
-							<SelectTrigger>
-								<SelectValue placeholder='filter by department' />
+							<SelectTrigger className=''>
+								<SelectValue placeholder='Filter by department' />
 							</SelectTrigger>
 
 							<SelectContent>
-								<SelectItem value='all'>All departments</SelectItem>
-								{DEPARTMENT_OPTIONS.map(({ value, label }) => (
-									<SelectItem key={value} value={value}>
-										{label}
+								<SelectItem value='all'>All Departments</SelectItem>
+								{DEPARTMENT_OPTIONS.map((department) => (
+									<SelectItem key={department.value} value={department.value}>
+										{department.label}
 									</SelectItem>
 								))}
 							</SelectContent>
 						</Select>
 
-						<CreateButton />
+						<CreateButton resource='subjects' />
 					</div>
 				</div>
 			</div>
@@ -176,4 +174,4 @@ const SubjectsList = () => {
 	)
 }
 
-export default SubjectsList
+export default SubjectListPage

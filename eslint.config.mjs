@@ -1,55 +1,38 @@
-import { defineConfig, globalIgnores } from 'eslint/config'
-import nextVitals from 'eslint-config-next/core-web-vitals'
-import nextTs from 'eslint-config-next/typescript'
+import js from '@eslint/js'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
 import prettierConfig from 'eslint-config-prettier'
 
-const eslintConfig = defineConfig([
-	...nextVitals,
-	...nextTs,
+export default tseslint.config(
+	{ ignores: ['dist', 'node_modules', '.next'] },
+
+	js.configs.recommended,
+	...tseslint.configs.recommended,
 	{
+		files: ['**/*.{ts,tsx}'],
+		languageOptions: {
+			ecmaVersion: 2020,
+			globals: {
+				...globals.browser,
+				...globals.es2020
+			}
+		},
+		plugins: {
+			'react-hooks': reactHooks,
+			'react-refresh': reactRefresh
+		},
 		rules: {
-			'no-unexpected-multiline': 'error',
-			'react/no-unknown-property': [
-				'error',
-				{
-					ignore: [
-						'position',
-						'rotation',
-						'scale',
-						'args',
-						'intensity',
-						'attach',
-						'geometry',
-						'material',
-						'castShadow',
-						'receiveShadow',
-						'dispose',
-						'angle',
-						'decay',
-						'penumbra',
-						'position',
-						'rotation',
-						'scale',
-						'args',
-						'intensity',
-						'attach',
-						'geometry',
-						'material',
-						'castShadow',
-						'receiveShadow',
-						'map',
-						'toneMapped'
-					]
-				}
+			...reactHooks.configs.recommended.rules,
+
+			'react-refresh/only-export-components': [
+				'warn',
+				{ allowConstantExport: true }
 			],
-			'jsx-a11y/alt-text': 'error',
-			'jsx-a11y/aria-props': 'error',
-			'jsx-a11y/aria-proptypes': 'error',
-			'jsx-a11y/role-has-required-aria-props': 'error'
+
+			'no-unexpected-multiline': 'error'
 		}
 	},
-	prettierConfig,
-	globalIgnores(['.next/**', 'out/**', 'build/**', 'next-env.d.ts'])
-])
-
-export default eslintConfig
+	prettierConfig
+)
