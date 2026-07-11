@@ -5,12 +5,11 @@
 		"Bfcx",
 		"Cahl",
 		"Chwkb",
+		"cloudinary",
 		"cmdk",
 		"commitlint",
 		"containss",
-		"nnull",
 		"controle",
-		"nbetween",
 		"critters",
 		"Dejamos",
 		"Delq",
@@ -36,11 +35,13 @@
 		"Lightformer",
 		"lintstagedrc",
 		"Lpah",
+		"nbetween",
 		"ncontains",
 		"ncontainss",
 		"nendswith",
 		"nendswiths",
 		"nina",
+		"nnull",
 		"nstartswith",
 		"nstartswiths",
 		"proptypes",
@@ -59,8 +60,6 @@
 		"**/*.png",
 		"**/*.jpg",
 		"**/*.mp4",
-		"src/components/models/Macbook-14.tsx",
-		"src/components/models/Macbook-16.tsx",
-		"src/components/models/Macbook.tsx"
+		"dist"
 	]
 }
