@@ -60,8 +60,6 @@
 		"**/*.png",
 		"**/*.jpg",
 		"**/*.mp4",
-		"src/components/models/Macbook-14.tsx",
-		"src/components/models/Macbook-16.tsx",
-		"src/components/models/Macbook.tsx"
+		"dist"
 	]
 }
