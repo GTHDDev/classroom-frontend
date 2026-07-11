@@ -44396,15 +44396,13 @@ Please change the parent <Route path="${S}"> to <Route path="${S === '/' ? '*' :
 					var r
 					;((n = (r = n) != null ? r : !e.getIsAllColumnsVisible()),
 						e.setColumnVisibility(
-							e
-								.getAllLeafColumns()
-								.reduce(
-									(o, s) => ({
-										...o,
-										[s.id]: n || !(s.getCanHide != null && s.getCanHide())
-									}),
-									{}
-								)
+							e.getAllLeafColumns().reduce(
+								(o, s) => ({
+									...o,
+									[s.id]: n || !(s.getCanHide != null && s.getCanHide())
+								}),
+								{}
+							)
 						))
 				}),
 				(e.getIsAllColumnsVisible = () =>
