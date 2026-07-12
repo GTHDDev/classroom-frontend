@@ -24,25 +24,7 @@ export default defineConfig({
 			output: {
 				manualChunks(id: string) {
 					if (id.includes('node_modules')) {
-						if (
-							id.includes('react-dom') ||
-							id.includes('react-router-dom') ||
-							id.includes('react')
-						) {
-							return 'vendor_react'
-						}
-						if (id.includes('@refinedev')) {
-							return 'vendor_refine'
-						}
-						if (
-							id.includes('@radix-ui') ||
-							id.includes('lucide-react') ||
-							id.includes('recharts')
-						) {
-							return 'vendor_ui'
-						}
-
-						return 'vendor_rest'
+						return 'vendor'
 					}
 				}
 			}
