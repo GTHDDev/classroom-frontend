@@ -22,8 +22,10 @@ import {
 	useRefineOptions,
 	useRegister
 } from '@refinedev/core'
+import { UserRole } from '@/types'
 
 export const SignUpForm = () => {
+	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [confirmPassword, setConfirmPassword] = useState('')
@@ -51,8 +53,10 @@ export const SignUpForm = () => {
 		}
 
 		register({
+			name,
 			email,
-			password
+			password,
+			role: UserRole.STUDENT
 		})
 	}
 
@@ -114,6 +118,17 @@ export const SignUpForm = () => {
 				<CardContent className={cn('px-0')}>
 					<form onSubmit={handleSignUp}>
 						<div className={cn('flex', 'flex-col', 'gap-2')}>
+							<Label htmlFor='name'>Name</Label>
+							<Input
+								id='name'
+								type='text'
+								placeholder=''
+								required
+								value={name}
+								onChange={(e) => setName(e.target.value)}
+							/>
+						</div>
+						<div className={cn('flex', 'flex-col', 'gap-2', 'mt-6')}>
 							<Label htmlFor='email'>Email</Label>
 							<Input
 								id='email'

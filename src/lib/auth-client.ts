@@ -11,11 +11,6 @@ export const authClient = createAuthClient({
 				defaultValue: 'student',
 				input: true
 			},
-			department: {
-				type: 'string',
-				required: false,
-				input: true
-			},
 			imageCldPubId: {
 				type: 'string',
 				required: false,
