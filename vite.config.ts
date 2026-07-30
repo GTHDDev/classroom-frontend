@@ -1,3 +1,4 @@
+import { sentryVitePlugin } from '@sentry/vite-plugin'
 import { visualizer } from 'rollup-plugin-visualizer'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
@@ -12,6 +13,18 @@ export default defineConfig({
 		visualizer({
 			open: true,
 			filename: 'dist/stats.html'
+		}),
+		sentryVitePlugin({
+			org: 'ghosthard1117',
+			project: 'classroom-frontend',
+			authToken: process.env.SENTRY_AUTH_TOKEN,
+			sourcemaps: {
+				filesToDeleteAfterUpload: [
+					'./**/*.map',
+					'.*/**/public/**/*.map',
+					'./dist/**/client/**/*.map'
+				]
+			}
 		})
 	],
 	resolve: {
@@ -20,6 +33,7 @@ export default defineConfig({
 		}
 	},
 	build: {
+		sourcemap: true,
 		rollupOptions: {
 			output: {
 				manualChunks(id: string) {

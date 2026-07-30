@@ -1,4 +1,3 @@
-
 # 🎓 Classroom Dashboard - Frontend
 
 <div align="center">
@@ -47,6 +46,7 @@ This repository contains the code for an in-depth tutorial available on **[JavaS
 A **high-performance PERN stack** (PostgreSQL, Express, React, Node.js) academic hub designed for educational institutions.
 
 ### Key Highlights:
+
 - 🔐 **Multi-Role System**: Admin, Teacher, and Student portals with role-based access control
 - 🎯 **Decoupled Architecture**: Express/Node.js backend with modular React frontend powered by Refine
 - 📊 **Real-Time Analytics**: Dashboard with live statistics on enrollments, classes, and faculty
@@ -61,38 +61,49 @@ A **high-performance PERN stack** (PostgreSQL, Express, React, Node.js) academic
 ## 🎯 Features
 
 ### 👥 Multi-Role Authentication
+
 A secure authentication system powered by **Better Auth** and **Arcjet** that dynamically routes Students, Teachers, and Admins to protected dashboards with strict role-based permissions.
 
 ### 📊 Unified Analytics Dashboard
+
 High-level overview of institutional health featuring:
+
 - Real-time statistics on student enrollment
 - Active classes tracking
 - Faculty distribution metrics
 - Campus-wide insights via Refine's data providers
 
 ### 🎓 Intelligent Subject Management
+
 Centralized curriculum control:
+
 - Create and manage subjects
 - Apply instant filters
 - Drill down into class assignments
 - Monitor teacher workloads
 
 ### 🏛️ Departmental Governance
+
 Structural management layer:
+
 - Organize subjects and faculties into departments
 - Detailed views of students and educators per department
 - Faculty workload distribution
 - Academic hierarchy management
 
 ### 👨‍🏫 Dynamic Faculty Directory
+
 Robust, paginated directory with:
+
 - Advanced search by name or email
 - Profile image hosting via **Cloudinary**
 - Complete teaching schedule visibility
 - Department associations
 
 ### 🗓️ Advanced Class Orchestration
+
 Core scheduling engine with:
+
 - Session scheduling and management
 - Capacity limit configuration
 - Multi-teacher assignment across sections
@@ -100,7 +111,9 @@ Core scheduling engine with:
 - Built with **Drizzle ORM** for data integrity
 
 ### 🔐 Code-Based Enrollment System
+
 Google Classroom-inspired workflow:
+
 - Unique 6-8 digit joining codes
 - Instant course access for students
 - Secure, controlled-access environment
@@ -112,34 +125,34 @@ Google Classroom-inspired workflow:
 
 ### 🎨 Frontend
 
-| Technology | Purpose |
-|-----------|---------|
-| **React** | UI library for building interactive components |
-| **Refine** | Framework for data-intensive admin panels |
-| **shadcn/ui** | Re-usable, accessible UI components |
-| **Tailwind CSS** | Utility-first styling framework |
-| **TypeScript** | Static typing for safer code |
-| **Zod** | Runtime schema validation |
+| Technology       | Purpose                                        |
+| ---------------- | ---------------------------------------------- |
+| **React**        | UI library for building interactive components |
+| **Refine**       | Framework for data-intensive admin panels      |
+| **shadcn/ui**    | Re-usable, accessible UI components            |
+| **Tailwind CSS** | Utility-first styling framework                |
+| **TypeScript**   | Static typing for safer code                   |
+| **Zod**          | Runtime schema validation                      |
 
 ### 🖥️ Backend
 
-| Technology | Purpose |
-|-----------|---------|
-| **Node.js** | JavaScript runtime |
-| **Express.js** | Web framework for APIs |
-| **PostgreSQL** | Relational database |
-| **Neon** | Serverless PostgreSQL platform |
-| **Drizzle ORM** | Type-safe database access |
-| **Better Auth** | Authentication framework |
+| Technology      | Purpose                        |
+| --------------- | ------------------------------ |
+| **Node.js**     | JavaScript runtime             |
+| **Express.js**  | Web framework for APIs         |
+| **PostgreSQL**  | Relational database            |
+| **Neon**        | Serverless PostgreSQL platform |
+| **Drizzle ORM** | Type-safe database access      |
+| **Better Auth** | Authentication framework       |
 
 ### 🔒 Security & Monitoring
 
-| Technology | Purpose |
-|-----------|---------|
-| **Arcjet** | Rate limiting, bot protection, data masking |
-| **Cloudinary** | Image/video management |
-| **CodeRabbit** | AI-powered code review |
-| **Site24x7** | Application monitoring & uptime tracking |
+| Technology     | Purpose                                     |
+| -------------- | ------------------------------------------- |
+| **Arcjet**     | Rate limiting, bot protection, data masking |
+| **Cloudinary** | Image/video management                      |
+| **CodeRabbit** | AI-powered code review                      |
+| **Site24x7**   | Application monitoring & uptime tracking    |
 
 ---
 
@@ -148,6 +161,7 @@ Google Classroom-inspired workflow:
 ### Prerequisites
 
 Ensure you have installed:
+
 - **[Git](https://git-scm.com/)**
 - **[Node.js](https://nodejs.org/)** (v18 or higher)
 - **[npm](https://www.npmjs.com/)** (comes with Node.js)
@@ -183,7 +197,7 @@ VITE_CLOUDINARY_UPLOAD_URL=https://api.cloudinary.com/v1_1/your_cloud_name/image
 
 Get your credentials:
 
--   **Cloudinary**: Sign up at [https://cloudinary.com](https://cloudinary.com)
+- **Cloudinary**: Sign up at [https://cloudinary.com](https://cloudinary.com)
 
 ### 3. Start Development Server
 
@@ -195,17 +209,17 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📦 Available Scripts
 
-| Command           | Purpose                                  |
-| :---------------- | :--------------------------------------- |
-| `npm run dev`     | Start development server                 |
-| `npm run build`   | Build for production                     |
-| `npm start`       | Start production server                  |
-| `npm run lint`    | Run ESLint checks                        |
-| `npm run lint:fix`| Fix ESLint issues automatically          |
-| `npm run format`  | Format code with Prettier                |
-| `npm run format:check`| Check code formatting                |
-| `npm run type-check`| Run TypeScript type checking           |
-| `npm run validate`| Run all checks (type, format, lint)      |
+| Command                | Purpose                             |
+| :--------------------- | :---------------------------------- |
+| `npm run dev`          | Start development server            |
+| `npm run build`        | Build for production                |
+| `npm start`            | Start production server             |
+| `npm run lint`         | Run ESLint checks                   |
+| `npm run lint:fix`     | Fix ESLint issues automatically     |
+| `npm run format`       | Format code with Prettier           |
+| `npm run format:check` | Check code formatting               |
+| `npm run type-check`   | Run TypeScript type checking        |
+| `npm run validate`     | Run all checks (type, format, lint) |
 
 ### Development Workflow
 
@@ -220,10 +234,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 Your code follows these ESLint rules:
 
--   ✅ TypeScript best practices
--   ✅ React Hooks conventions
--   ✅ React Refresh compatibility
--   ✅ No unexpected multiline statements
+- ✅ TypeScript best practices
+- ✅ React Hooks conventions
+- ✅ React Refresh compatibility
+- ✅ No unexpected multiline statements
 
 Run locally: `npm run lint`
 
@@ -231,11 +245,11 @@ Run locally: `npm run lint`
 
 Your code is formatted with:
 
--   ✅ No semicolons
--   ✅ Single quotes for JavaScript
--   ✅ Single quotes for JSX
--   ✅ Max line width: 80 characters
--   ✅ 2-space indentation
+- ✅ No semicolons
+- ✅ Single quotes for JavaScript
+- ✅ Single quotes for JSX
+- ✅ Max line width: 80 characters
+- ✅ 2-space indentation
 
 Run locally: `npm run format`
 
@@ -247,10 +261,10 @@ Automatically runs linting and formatting before each commit to maintain code qu
 
 Every pull request runs automated checks:
 
--   ESLint validation
--   Prettier format check
--   TypeScript type checking
--   Detailed PR comments with issues
+- ESLint validation
+- Prettier format check
+- TypeScript type checking
+- Detailed PR comments with issues
 
 ## 📁 Project Structure
 
@@ -297,10 +311,10 @@ VITE_CLOUDINARY_UPLOAD_URL=https://api.cloudinary.com/v1_1/your_production_cloud
 
 ### Deployment Platforms
 
--   **Vercel**: `vercel deploy`
--   **Netlify**: Connect your repo directly
--   **GitHub Pages**: Configure in repository settings
--   **Docker**: Create a Dockerfile for containerized deployment
+- **Vercel**: `vercel deploy`
+- **Netlify**: Connect your repo directly
+- **GitHub Pages**: Configure in repository settings
+- **Docker**: Create a Dockerfile for containerized deployment
 
 ## 🤝 Contributing
 
@@ -315,10 +329,10 @@ We welcome contributions! Please follow these steps:
 
 ### Code Style Guidelines
 
--   Follow ESLint rules: `npm run lint`
--   Format with Prettier: `npm run format`
--   Use TypeScript for all new code
--   Write meaningful commit messages
+- Follow ESLint rules: `npm run lint`
+- Format with Prettier: `npm run format`
+- Use TypeScript for all new code
+- Write meaningful commit messages
 
 ## 📝 License
 
@@ -326,8 +340,8 @@ This project is open source and available under the MIT License.
 
 ## 🎓 Learning Resources
 
--   [React Documentation](https://react.dev/docs)
--   [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
--   [Tailwind CSS Docs](https://tailwindcss.com/docs)
--   [Refine Framework](https://refine.dev/)
--   [PostgreSQL Docs](https://www.postgresql.org/docs/)
+- [React Documentation](https://react.dev/docs)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [Tailwind CSS Docs](https://tailwindcss.com/docs)
+- [Refine Framework](https://refine.dev/)
+- [PostgreSQL Docs](https://www.postgresql.org/docs/)
